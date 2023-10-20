@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator</title>
+</head>
+<body>
+    
+    <script>
+        // if list of parameters is defined
+        // and the argument is an array of arguments
+        // it will be spread to arguments
+        // if function call argument is preceded by
+        // the spread operator ...
+        function showArr(a,b,c) {
+            console.log(a, b, c);
+        }
+
+        let arr1 = ["a","b","c","d","e"];
+        showArr(...arr1);
+
+        console.log("---");
+
+        // spread operator can be used with objects
+        let obj1 = {
+            name: "Alice",
+            age: 30
+        }
+
+        let obj2 = {
+            ...obj1,
+            weight: 56
+        }
+
+        console.log(obj1);
+        console.log(obj2);
+    </script>
+</body>
+</html>
